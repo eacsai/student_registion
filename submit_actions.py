@@ -32,5 +32,4 @@ class student_registration:
 if __name__ == '__main__':
     #自行填入账号密码和chromedriver路径
     cpath = "/usr/bin/chromedriver"
-    password = "'"+sys.argv[2]+"'"
-    student_registration('1183450307','Hit@314159',sys.argv[3],cpath).run()
+    student_registration(sys.argv[1],sys.argv[2],sys.argv[3],cpath).run()
