@@ -21,7 +21,7 @@ class student_registration:
     def submit(self, url):
         self.driver.get(url) #登陆
         self.driver.execute_script("document.getElementById('txfscheckbox1').checked = true;document.getElementById('txfscheckbox2').checked = true;document.getElementById('txfscheckbox3').checked = true")
-        self.driver.execute_script("kzl10 = "+self.address+";setTimeout(save,5000)")
+        self.driver.execute_script("var kzl10 = "+self.address+";setTimeout(save,1000)")
     def run(self):
         try:
             self.login(self.login_url)
