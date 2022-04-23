@@ -35,4 +35,5 @@ jobs:
           sudo cp -p ./chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
           python ./submit_actions.py "'1183450307'" ${{ secrets.USER1183450307 }} "'黑龙江省哈尔滨市南岗区'"
+          python ./submit_actions.py "'1183200622'" ${{ secrets.USER1183200622 }} "'黑龙江省哈尔滨市南岗区'"
          

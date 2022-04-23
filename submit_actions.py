@@ -39,5 +39,5 @@ class student_registration:
 if __name__ == '__main__':
     #自行填入账号密码和chromedriver路径
     cpath = "/usr/bin/chromedriver"
-    password = '"'+safe_b64decode(sys.argv[2]).decode('ascii')+'"'
+    password = "'"+safe_b64decode(sys.argv[2]).decode('ascii')+"'"
     student_registration(sys.argv[1],password,sys.argv[3],cpath).run()
