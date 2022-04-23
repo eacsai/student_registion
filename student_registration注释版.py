@@ -8,7 +8,7 @@ class student_registration:
         self.username =  username#用户名
         self.password =  password#密码
         self.login_url = "https://ids.hit.edu.cn/authserver/login" #hit登陆url
-        self.registration_url = path #上报的url
+        self.registration_url = "https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/edit" #上报的url
         self.driver = webdriver.Chrome(executable_path=path) 
     def login(self, url):   # 通过request_url来获取上报界面
         self.driver.get(url) #登陆
