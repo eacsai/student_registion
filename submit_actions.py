@@ -3,6 +3,11 @@ import base64
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+def safe_b64decode(s):
+    length = len(s) % 4
+    for i in range(length):
+        s = s + '='
+    return base64.b64decode(s)
 class student_registration:
     def __init__(self,username,password,address,path):
         options = webdriver.ChromeOptions()
@@ -34,5 +39,5 @@ class student_registration:
 if __name__ == '__main__':
     #自行填入账号密码和chromedriver路径
     cpath = "/usr/bin/chromedriver"
-    password = '"'+base64.b64decode(sys.argv[2]).decode('ascii')+'"'
+    password = '"'+safe_b64decode(sys.argv[2]).decode('ascii')+'"'
     student_registration(sys.argv[1],password,sys.argv[3],cpath).run()
