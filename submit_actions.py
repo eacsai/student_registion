@@ -1,4 +1,5 @@
 import sys
+import base64
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -33,4 +34,5 @@ class student_registration:
 if __name__ == '__main__':
     #自行填入账号密码和chromedriver路径
     cpath = "/usr/bin/chromedriver"
-    student_registration(sys.argv[1],sys.argv[2],sys.argv[3],cpath).run()
+    password = '"'+base64.b64decode(sys.argv[2]).decode('ascii')+'"'
+    student_registration(sys.argv[1],password,sys.argv[3],cpath).run()
