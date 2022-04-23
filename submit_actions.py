@@ -1,6 +1,6 @@
 import sys
 from selenium import webdriver
-from selenium.webdriver.common.by import B
+from selenium.webdriver.common.by import By
 class student_registration:
     def __init__(self,username,password,address,path):
         options = webdriver.ChromeOptions()
