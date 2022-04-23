@@ -27,8 +27,12 @@ class student_registration:
         self.driver.execute_script("document.getElementById('txfscheckbox1').checked = true;document.getElementById('txfscheckbox2').checked = true;document.getElementById('txfscheckbox3').checked = true")
         self.driver.execute_script("kzl10 = "+self.address+";setTimeout(save,1000)")
     def run(self):
-        self.login(self.login_url)
-        self.submit(self.registration_url)
+        try:
+            self.login(self.login_url)
+            self.submit(self.registration_url)
+            print(user['username'],'已上报成功')
+        finally:
+            self.driver.quit()
 if __name__ == '__main__':
     # 获取当前脚本所在文件夹路径
     curPath = os.path.dirname(os.path.realpath(__file__))
@@ -40,4 +44,4 @@ if __name__ == '__main__':
     for user in users:
         #自行填入账号密码和chromedriver路径
         student_registration(user['username'],user['password'],user['address'],'/Users/wqw/Documents/submit/chromedriver').run()
-        print(user['username'],'已上报成功')
+
