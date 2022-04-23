@@ -1,2 +1,2 @@
-requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1641580202195/work
-selenium @ file:///home/conda/feedstock_root/build_artifacts/selenium_1641937238099/work/src/py
+requests==2.23.0
+selenium==3.141.0
