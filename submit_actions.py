@@ -13,7 +13,7 @@ class student_registration:
         self.address = address#地址
         self.login_url = "https://ids.hit.edu.cn/authserver/login" #hit登陆url
         self.registration_url = "https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/edit" #上报的url
-        self.driver = webdriver.Chrome(path)
+        self.driver = webdriver.Chrome(path, options = options)
     def login(self, url):   # 通过request_url来获取上报界面
         self.driver.get(url) #登陆
         self.driver.execute_script("const username = document.getElementById('username');username.value = " + self.username + ";const password = document.getElementById('password');password.value = "+ "'" + self.password + "'")
