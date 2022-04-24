@@ -10,3 +10,8 @@
   password: "'222'"
   address: "'222'"
 ```
+# github actions设置
+submit_actions.py为github actions版本
+命令执行格式为：python ./submit_actions.py ${{ secrets.USER_USERNAME }} ${{ secrets.USER_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
+* secrets.USER_USERNAME：为学号
+* secrets.USER_PASSWORD：为用户密码
