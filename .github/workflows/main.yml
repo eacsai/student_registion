@@ -36,6 +36,5 @@ jobs:
         run: |
           sudo cp -p ./chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
-          python ./submit_actions.py ${{ secrets.USER1_USERNAME }} ${{ secrets.USER1_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
-          python ./submit_actions.py ${{ secrets.USER2_USERNAME }} ${{ secrets.USER2_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
+          python ./submit_actions.py ${{ secrets.USER3_USERNAME }} ${{ secrets.USER3_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
          
