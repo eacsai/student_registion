@@ -1,4 +1,5 @@
 import sys
+# import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 class student_registration:
@@ -12,7 +13,7 @@ class student_registration:
         self.address = address#地址
         self.login_url = "https://ids.hit.edu.cn/authserver/login" #hit登陆url
         self.registration_url = "https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/edit" #上报的url
-        self.driver = webdriver.Chrome(path,options=options)
+        self.driver = webdriver.Chrome(path)
     def login(self, url):   # 通过request_url来获取上报界面
         self.driver.get(url) #登陆
         self.driver.execute_script("const username = document.getElementById('username');username.value = " + self.username + ";const password = document.getElementById('password');password.value = "+ "'" + self.password + "'")
@@ -21,7 +22,8 @@ class student_registration:
     def submit(self, url):
         self.driver.get(url) #登陆
         self.driver.execute_script("document.getElementById('txfscheckbox1').checked = true;document.getElementById('txfscheckbox2').checked = true;document.getElementById('txfscheckbox3').checked = true")
-        self.driver.execute_script("var kzl10 = "+self.address+";setTimeout(save,1000)")
+        self.driver.execute_script("kzl10 = "+self.address+";setTimeout(save,2000)")
+        # time.sleep(15555)
     def run(self):
         try:
             self.login(self.login_url)
@@ -32,4 +34,5 @@ class student_registration:
 if __name__ == '__main__':
     #自行填入账号密码和chromedriver路径
     cpath = "/usr/bin/chromedriver"
+    # cpath = "/Users/wqw/Documents/submit/chromedriver"
     student_registration(sys.argv[1],sys.argv[2],sys.argv[3],cpath).run()
