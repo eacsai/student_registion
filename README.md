@@ -1,5 +1,5 @@
 # student_registion
-实现hit每日上报（需如实上报）
+实现hit哈尔滨工业大学每日上报（需如实上报）
 # yml文件格式
 在该目录下新建'submit.yml',yml文件格式如下:
 ```yaml
