@@ -16,7 +16,7 @@ class student_registration:
         self.driver = webdriver.Chrome(path,options = options)
     def login(self, url):   # 通过request_url来获取上报界面
         self.driver.get(url) #登陆
-        self.driver.execute_script("const username = document.getElementById('username');username.value = " + self.username + ";const password = document.getElementById('password');password.value = "+ "'" + self.password + "'")
+        self.driver.execute_script("const username = document.getElementById('username');username.value = '" + self.username + "';const password = document.getElementById('password');password.value = "+ "'" + self.password + "'")
         res3 = self.driver.find_element(By.ID,"login_submit")
         res3.click()
     def submit(self, url):
