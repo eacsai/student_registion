@@ -40,4 +40,7 @@ jobs:
           python ./submit_actions.py ${{ secrets.USER2_USERNAME }} ${{ secrets.USER2_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
           python ./submit_actions.py ${{ secrets.USER3_USERNAME }} ${{ secrets.USER3_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
           python ./submit_actions.py ${{ secrets.USER4_USERNAME }} ${{ secrets.USER4_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
-         
+          python ./submit_actions.py ${{ secrets.USER5_USERNAME }} ${{ secrets.USER5_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
+          python ./submit_actions.py ${{ secrets.USER6_USERNAME }} ${{ secrets.USER6_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
+          python ./submit_actions.py ${{ secrets.USER7_USERNAME }} ${{ secrets.USER7_PASSWORD }} "'黑龙江省哈尔滨市南岗区'"
+
