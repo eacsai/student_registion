@@ -1,6 +1,6 @@
 # student_registion
 实现hit哈尔滨工业大学每日上报（需如实上报）
-*submit_actions.py为搭配github actions使用的版本
+<br>submit_actions.py为搭配github actions使用的版本
 # yml文件格式
 在该目录下新建'submit.yml',yml文件格式如下:
 ```yaml
